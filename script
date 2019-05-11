@@ -10,6 +10,7 @@ mkswap /dev/sda2
 swapon /dev/sda2
 mkfs.ext4 /dev/sda3 -yes
 mkfs.ext4 /dev/sda4 -yes 
+echo "=========================================="
 
 #2. Mount paritions
 mount /dev/sda3 /mnt
@@ -17,13 +18,16 @@ mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 mkdir /mnt/home
 mount /dev/sda4 /mnt/home
+echo "=========================================="
 
 #3. Install base
 pacstrap /mnt base base-devel
+echo "=========================================="
 
 #Change root into the new system: 
 arch-chroot /mnt
+echo "=========================================="
 
 #Time zone
 timedatectl set-timezone Europe/London 
-
+echo "=========================================="
