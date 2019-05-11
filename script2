@@ -6,6 +6,6 @@ echo archpc >> /etc/hostname
 
 #Network configuration
 pacman -S wireless_tools
-PACMAN -S dialog
+pacman -S dialog
 pacman -S wpa_supplicant
 
