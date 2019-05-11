@@ -1,2 +1,6 @@
 #Set time and date
 timedatectl set-timezone Europe/London 
+
+#Delete scripts
+rm script*
+
