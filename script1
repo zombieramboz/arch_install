@@ -28,7 +28,7 @@ genfstab -p -U /mnt >> /mnt/etc/fstab
 wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
 
 #Chmod script2
-chmod+x script2
+chmod +x script2
 
 # copy the second script
 cp script2 /mnt/script2
