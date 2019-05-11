@@ -1,0 +1,2 @@
+#Set time and date
+timedatectl set-timezone Europe/London 
