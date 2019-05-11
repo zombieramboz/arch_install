@@ -29,10 +29,10 @@ echo chrooting into new system----------
 #arch-0chroot /mnt
 
 #Time zone
-arch-chroot timedatectl set-timezone Europe/London 
+arch-chroot /mnt timedatectl set-timezone Europe/London 
 
 #Set hostname
-arch-chroot echo "127.0.1.1 localhost.localdomain ArchPc" >> /etc/hosts
-arch-chroot echo ArchPc >> /etc/hostname
+arch-chroot /mnt echo "127.0.1.1 localhost.localdomain ArchPc" >> /etc/hosts
+arch-chroot /mnt echo ArchPc >> /etc/hostname
 
-arch-chroot echo -ne '\007'
+#arch-chroot echo -ne '\007'
