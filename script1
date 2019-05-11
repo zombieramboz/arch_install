@@ -25,6 +25,6 @@ pacstrap /mnt base base-devel
 wget -L https://raw.github.com/zombieramboz/arch_install/script2
 chmod +x script2
 
-5. Copy second file to new root and execute
+#5. Copy second file to new root and execute
 cp script2 /mnt/script2
 arch-chroot /mnt ./script2
