@@ -22,9 +22,9 @@ mount /dev/sda4 /mnt/home
 pacstrap /mnt base base-devel
 
 #4. Get second script
-wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
+#wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
 chmod +x script2
-
+#
 #5. Copy second file to new root and execute
 cp script2 /mnt/script2
 arch-chroot /mnt ./script2
