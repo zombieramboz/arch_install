@@ -10,7 +10,7 @@ bootctl install
 #Configure  EFI
 #echo $blkid | sed -n '/sda1/s/.*UUID=\"\([^\"]*\)\".*/\1/p' >> /boot/loader/entries/arch.conf
 #echo $blkid > /boot/loader/entries/arch.conf
-echo $(blkid /dev/sdb3) > arch.conf
+echo $blkid > arch.conf
 
 rm script*
 
