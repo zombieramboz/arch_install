@@ -29,4 +29,4 @@ echo chrooting into new system----------
 #arch-0chroot /mnt
 
 #Time zone
-timedatectl set-timezone Europe/London 
+arch-chroot timedatectl set-timezone Europe/London 
