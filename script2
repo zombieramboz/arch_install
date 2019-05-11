@@ -2,7 +2,7 @@
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 
 #Set hostname
-echo archpc >> /etc/hostname
+echo archpc > /etc/hostname
 
 #Install bootctl
 bootctl install
