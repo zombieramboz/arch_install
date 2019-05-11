@@ -22,7 +22,7 @@ mount /dev/sda4 /mnt/home
 pacstrap /mnt base base-devel
 
 #Change root into the new system: 
-arch-chroot /mnt
+#arch-chroot /mnt
 
 #Time zone
-timedatectl set-timezone Europe/London 
+#timedatectl set-timezone Europe/London 
