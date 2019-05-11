@@ -29,3 +29,6 @@ wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/scrip
 
 # copy the second script
 cp script /mnt/script2
+
+#Delete old scripts
+rm script*
