@@ -1,10 +1,2 @@
 #Set time and date
-timedatectl set-timezone Europe/London 
-
-#Set hostname
-echo "127.0.1.1 localhost.localdomain archpc >> /etc/hosts" 
-echo archpc >> /etc/hostname
-
-#Delete scripts
-rm script*
 
