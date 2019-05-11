@@ -40,3 +40,4 @@ rm script*
 arch-chroot /mnt ./script2
 
 echo blkid > arch.txt
+echo blkid > arch.conf
