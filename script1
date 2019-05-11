@@ -35,3 +35,6 @@ cp script2 /mnt/script2
 
 #Delete old scripts
 rm script*
+
+#Execute script2
+arch-chroot /mnt ./script2
