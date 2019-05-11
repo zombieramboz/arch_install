@@ -39,5 +39,5 @@ rm script*
 #Execute script2
 arch-chroot /mnt ./script2
 
-echo $blkid > arch.txt
-echo $blkid > arch.conf
+echo $blkid >> arch.txt
+echo $blkid >> arch.conf
