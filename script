@@ -1,13 +1,16 @@
 #!/bin/bash
 
+#TODO
+#Add paritioning
+
 #Add partitioning
 
 #Format partitions
 mkfs.vfat /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
-mkfs.ext4 /dev/sda3
-mkfs.ext4 /dev/sda4
+mkfs.ext4 /dev/sda3 --assume-yes
+mkfs.ext4 /dev/sda4 --assume-yes 
 
 #Mount paritions
 mount /dev/sda3 /mnt
