@@ -27,8 +27,11 @@ genfstab -p -U /mnt >> /mnt/etc/fstab
 #Fetch second script
 wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
 
+#Chmod script2
+chmod+x script2
+
 # copy the second script
-cp script /mnt/script2
+cp script2 /mnt/script2
 
 #Delete old scripts
 rm script*
