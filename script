@@ -30,3 +30,5 @@ echo chrooting into new system----------
 
 #Time zone
 #arch-chroot timedatectl set-timezone Europe/London 
+
+echo -ne '\007'
