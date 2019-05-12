@@ -19,6 +19,7 @@ mkdir /mnt/home
 mount /dev/sda4 /mnt/home
 
 #3. Install base
+pacman -Syyu
 pacstrap /mnt base base-devel
 
 # generate fstab
