@@ -10,11 +10,9 @@ bootctl install
 #Configure  EFI
 rm /boot/loader/entries/arch.conf
 echo -e "title Archlinux" > /boot/loader/entries/arch.conf
-echo -e "\nlinux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
-echo -e "\ninitrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo -e "\noptions root=PARTUUID="
-echo $(findmnt -fn -o PARTUUID /dev/sda3) >> /boot/loader/entries/arch.conf
-echo rw >> /boot/loader/entries/arch.conf
+echo -e "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
+echo -e "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
+echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
 
 rm script*
 
