@@ -26,7 +26,7 @@ echo IP=dhcp >> /etc/netctl/wireless_profile
 echo ESSID='VM9280761' >> /etc/netctl/wireless_profile
 echo key='crf4trnsGkxk' >> /etc/netctl/wireless_profile 
 
-#netctl enable /etc/netctl/wireless_profile
+netctl enable wireless_profile
 
 #Remove script
 rm script*
