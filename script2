@@ -1,4 +1,4 @@
-#Time zone
+/boot/loader/entries/arch.conf#Time zone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 
 #Set hostname
@@ -12,7 +12,7 @@ rm /boot/loader/entries/arch.conf
 echo -e "title Archlinux" > /boot/loader/entries/arch.conf
 echo -e "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo -e "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-#echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
+echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
 
 rm script*
 
