@@ -17,10 +17,15 @@ echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/lo
 #Wireless
 pacman -S wireless_tools
 echo Interface="$(iwconfig 2>/dev/null | grep -o "^\w*")" > /etc/netctl/wireless_profile 
+echo Connection=wireless >> /etc/netctl/wireless_profile 
+echo Security=wpa >> /etc/netctl/wireless_profile 
+echo IP=dhcp >> /etc/netctl/wireless_profile 
+echo ESSID=VM9280761 >> /etc/netctl/wireless_profile 
+netctl enable /etc/netctl/wireless_profile
 
 #Remove script
 rm script*
 
 #Reboot machine
-reboot
+shutdown -r now
 
