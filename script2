@@ -8,7 +8,7 @@ echo archpc > /etc/hostname
 bootctl install
 
 #Configure  EFI
-echo (findmnt -fn -o UUID /dev/sda3) > /boot/loader/entries/arch.conf
+echo options root=PARTUUID="&(findmnt -fn -o UUID /dev/sda3)" rw > /boot/loader/entries/arch.conf
 
 rm script*
 
