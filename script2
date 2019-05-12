@@ -16,10 +16,7 @@ echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/lo
 
 #Wireless
 pacman -S wireless_tools
-#wireless_device = iwconfig 2>/dev/null | grep -o "^\w*"
-echo $wireless_device
-echo Interface= > /etc/netctl/wireless_profile
-echo $wireless_device >> /etc/netctl/wireless_profile 
+echo Interface="$(iwconfig 2>/dev/null | grep -o "^\w*")" > /etc/netctl/wireless_profile 
 
 #Remove script
 rm script*
