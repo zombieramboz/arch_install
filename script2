@@ -1,4 +1,4 @@
-/boot/loader/entries/arch.conf#Time zone
+#Time zone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 
 #Set hostname
