@@ -16,7 +16,7 @@ echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/lo
 
 #Wireless-yes[******NOT WORKING******]
 pacman -S wireless_tools -yes
-Pacman -S dialog -yes
+pacman -S dialog -yes
 pacman -S wpa_supplicant -yes
 #cat > /etc/netctl/wireless_profile
 #echo Interface="$(iwconfig 2>/dev/null | grep -o "^\w*")" > /etc/netctl/wireless_profile 
