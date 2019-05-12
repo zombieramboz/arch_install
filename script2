@@ -19,7 +19,7 @@ pacman -S wireless_tools
 #wireless_device = iwconfig 2>/dev/null | grep -o "^\w*"
 echo $wireless_device
 echo Interface="$wireless_device" > /etc/netctl/wireless_profile 
-#echo wireless_device >> /etc/netctl/wireless_profile 
+#echo wireless_device > /etc/netctl/wireless_profile 
 
 #Remove script
 rm script*
