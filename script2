@@ -8,7 +8,11 @@ echo archpc > /etc/hostname
 bootctl install
 
 #Configure  EFI
-echo -e 'title Archlinux/nlinux /vmlinuz-linux/n/initrd /initramfs-linux.img/noptions root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)"' rw > /boot/loader/entries/arch.conf
+echo -e "title Archlinux\n" >> /boot/loader/entries/arch.conf
+echo -e "linux /vmlinuz-linux\n" >> /boot/loader/entries/arch.conf
+echo -e "initrd /initramfs-linux.img\n" >> /boot/loader/entries/arch.conf
+echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3) >> /boot/loader/entries/arch.conf
+echo rw > /boot/loader/entries/arch.conf >> /boot/loader/entries/arch.conf
 
 rm script*
 
