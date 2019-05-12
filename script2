@@ -8,8 +8,6 @@ echo archpc > /etc/hostname
 bootctl install
 
 #Configure  EFI
-rm /boot/loader/entries/arch.conf
-cat > /boot/loader/entries/arch.conf
 echo "title Archlinux" > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
