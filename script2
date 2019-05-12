@@ -8,8 +8,7 @@ echo archpc > /etc/hostname
 bootctl install
 
 #Configure  EFI
-blkid | sed -n '/sda3/s/.*UUID=\"\([^\"]*\)\".*/\1/p' > /boot/loader/entries/arch.conf
-#blkid /dev/sda3 > /boot/loader/entries/arch.conf
+echo (findmnt -fn -o UUID /dev/sda3) > /boot/loader/entries/arch.conf
 
 rm script*
 
