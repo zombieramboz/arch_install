@@ -8,7 +8,7 @@ echo archpc > /etc/hostname
 bootctl install
 
 #Configure  EFI
-echo options root=PARTUUID="&(findmnt -fn -o UUID /dev/sda3)" rw > /boot/loader/entries/arch.conf
+echo title Archlinux/nlinux /vmlinuz-linux/n/initrd /initramfs-linux.img/noptions root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw > /boot/loader/entries/arch.conf
 
 rm script*
 
