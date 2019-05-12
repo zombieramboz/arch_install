@@ -9,9 +9,9 @@ bootctl install
 
 #Configure  EFI
 rm /boot/loader/entries/arch.conf
-echo -e "title Archlinux" > /boot/loader/entries/arch.conf
-echo -e "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
-echo -e "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
+echo "title Archlinux" > /boot/loader/entries/arch.conf
+echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
+echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
 
 #Wireless-yes[******NOT WORKING******]
