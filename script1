@@ -22,7 +22,7 @@ mount /dev/sda4 /mnt/home
 pacstrap /mnt base base-devel
 
 # generate fstab
-#genfstab -p -U /mnt >> /mnt/etc/fstab
+genfstab -p -U /mnt > /mnt/etc/fstab
 
 #Fetch second script
 wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
