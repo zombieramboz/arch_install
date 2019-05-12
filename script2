@@ -1,4 +1,4 @@
-#Time zone
+rm /boot/loader/entries/arch.conf#Time zone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 
 #Set hostname
@@ -9,6 +9,7 @@ bootctl install
 
 #Configure  EFI
 rm /boot/loader/entries/arch.conf
+cat > /boot/loader/entries/arch.conf
 echo "title Archlinux" > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
