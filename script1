@@ -1,9 +1,12 @@
-#!/bin/bash
+dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc#!/bin/bash
 #Optimised for Dell Latitude, 240GB SSD, 8GB RAM. 
 
 #TODO
 #-----------------------------------------------------------
-#Add paritioning
+#Delete partitions
+#dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
+#-----------------------------------------------------------
+#Add paritions
 #parted -s /dev/sdb mkpart primary 1MiB 1025MiB
 
 #parted [option] device [command [argument]]
