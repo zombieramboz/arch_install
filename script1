@@ -2,27 +2,37 @@
 #Optimised for Dell Latitude, 240GB SSD, 8GB RAM. 
 
 #TODO
+#-----------------------------------------------------------
 #Add paritioning
+#parted -s /dev/sdb mkpart primary 1MiB 1025MiB
 
-#1. Format partitions
+#parted [option] device [command [argument]]
+
+#parted /dev/sda mklabel gpt
+#sudo parted -a opt /dev/sda mkpart primary ext4 0% 100%
+
+#https://www.gnu.org/software/parted/manual/parted.html
+#-----------------------------------------------------------
+
+#Format partitions
 mkfs.vfat /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
-mkfs.ext4 /dev/sda3 -yes
-mkfs.ext4 /dev/sda4 -yes 
+mkfs.ext4 /dev/sda3 --yes
+mkfs.ext4 /dev/sda4 --yes 
 
-#2. Mount paritions
+#Mount paritions
 mount /dev/sda3 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 mkdir /mnt/home
 mount /dev/sda4 /mnt/home
 
-#3. Install base
+#Install base
 pacman -Syyu
 pacstrap /mnt base base-devel
 
-# generate fstab
+#Generate fstab
 genfstab -p -U /mnt > /mnt/etc/fstab
 
 #Fetch second script
