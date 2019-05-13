@@ -5,7 +5,7 @@
 #dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
 
 #Add paritions
-parted /dev/sda mklabel gpt
+parted /dev/sda table gpt
 parted /dev/sda mkpart primary fat32 1MiB 500MiB
 parted /dev/sda mkpart primary linux-swap 500MiB 8.5GiB
 parted /dev/sda mkpart primary ext4 8.5GiB 23.5GiB
