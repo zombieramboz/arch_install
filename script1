@@ -1,6 +1,7 @@
 #Optimised for Dell Latitude, 240GB SSD, 8GB RAM. 
 
 #Delete partitions
+#umount /mnt*
 #dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
 
 #Add paritions
@@ -14,8 +15,8 @@ parted /dev/sda mkpart primary ext4 23.5GiB 100%
 mkfs.vfat /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
-mkfs.ext4 /dev/sda3 --yes
-mkfs.ext4 /dev/sda4 --yes 
+mkfs.ext4 /dev/sda3 
+mkfs.ext4 /dev/sda4 
 
 #Mount paritions
 mount /dev/sda3 /mnt
@@ -25,7 +26,6 @@ mkdir /mnt/home
 mount /dev/sda4 /mnt/home
 
 #Install base
-pacman -Syyu
 pacstrap /mnt base base-devel
 
 #Generate fstab
