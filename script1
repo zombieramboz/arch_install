@@ -8,7 +8,7 @@ parted /dev/sda mklabel gpt
 parted /dev/sda mkpart primary fat32 1MiB 500MiB
 parted /dev/sda mkpart primary linux-swap 500MiB 8.5GiB
 parted /dev/sda mkpart primary ext4 8.5GiB 23.5GiB
-parted /dev/sda mkpart primary ext4 24.5GiB 100%
+parted /dev/sda mkpart primary ext4 23.5GiB 100%
 
 #Format partitions
 mkfs.vfat /dev/sda1
