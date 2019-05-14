@@ -33,10 +33,10 @@ echo ESSID='VM9280761' >> /etc/netctl/wireless_profile
 echo key='crf4trnsGkxk' >> /etc/netctl/wireless_profile 
 
 netctl enable wireless_profile
+netctl start wireless_profile
 
 #Remove script
 rm script*
 
-#Reboot machine
-shutdown -r now
+
 
