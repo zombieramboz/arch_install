@@ -1,17 +1,23 @@
 #Time zone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 
+read -p "Press [Enter] to continue..."
+
 #Set hostname
 echo archpc > /etc/hostname
 
 #Install bootctl
 bootctl install
 
+read -p "Press [Enter] to continue..."
+
 #Configure  EFI
 echo title Archlinux > /boot/loader/entries/arch.conf
 echo linux /vmlinuz-linux >> /boot/loader/entries/arch.conf
 echo initrd /initramfs-linux.img >> /boot/loader/entries/arch.conf
 echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
+
+read -p "Press [Enter] to continue..."
 
 #Wireless-yes[******NOT WORKING******]
 pacman -S wireless_tools -yes
