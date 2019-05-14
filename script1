@@ -5,12 +5,12 @@
 #dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
 
 #Add paritions
-parted /dev/sda mklabel gpt
-parted /dev/sda mkpart primary fat32 1MiB 500MiB
-parted /dev/sda1 boot on
-parted /dev/sda mkpart primary linux-swap 500MiB 8.5GiB
-parted /dev/sda mkpart primary ext4 8.5GiB 23.5GiB
-parted /dev/sda mkpart primary ext4 23.5GiB 100%
+#parted /dev/sda mklabel gpt
+#parted /dev/sda mkpart primary fat32 1MiB 500MiB
+#parted /dev/sda1 boot on
+#parted /dev/sda mkpart primary linux-swap 500MiB 8.5GiB
+#parted /dev/sda mkpart primary ext4 8.5GiB 23.5GiB
+#parted /dev/sda mkpart primary ext4 23.5GiB 100%
 
 #Format partitions
 mkfs.vfat /dev/sda1
@@ -19,9 +19,7 @@ swapon /dev/sda2
 mkfs.ext4 /dev/sda3 
 mkfs.ext4 /dev/sda4 
 
-read -p "Press [Enter] to continue..."
-
-#Mount paritions
+#Mount partitions
 mount /dev/sda3 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
