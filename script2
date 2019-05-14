@@ -34,6 +34,9 @@ pacman -S wpa_supplicant
 #netctl enable wireless_profile
 #netctl start wireless_profile
 
+#Set root password
+echo "Enter root password" | passwd --stdin linuxuser
+
 #Remove script
 rm script*
 
