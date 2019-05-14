@@ -56,7 +56,7 @@ pacman -S slim
 systemctl start slim.service              
 systemctl enable slim.service 
 
-echo exec startxfce4 > /home/arch/.xinitrc
+echo exec startxfce4 > /home/adrian/.xinitrc
 
 #Remove script
 rm script*
