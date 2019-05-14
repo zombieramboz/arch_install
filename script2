@@ -38,6 +38,13 @@ pacman -S wpa_supplicant
 echo "Set root password"
 passwd root
 
+# create user
+useradd -m -G wheel -s /bin/bash adrian
+passwd adrian
+
+# configure sudo 
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+
 #Remove script
 rm script*
 
