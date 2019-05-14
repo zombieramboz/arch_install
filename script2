@@ -1,7 +1,8 @@
 #Time zone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 
-read -p "Press [Enter] to continue..."
+#Localisation
+sed -i '/^#en_GB.UTF*/ s/^#//' /etc/locale.gen
 
 #Set hostname
 echo archpc > /etc/hostname
