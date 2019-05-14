@@ -56,6 +56,9 @@ pacman -S xorg xorg-server
 #Install #xfce
 pacman -S xfce4 xfce4-goodies 
 
+#Install applications
+pacman -S openvpn wget gparted unrar lrzip lzip p7zip firefox-developer-edition youtube-dl qbittorrent pacman-contrib calc rsync
+
 #Install slim
 pacman -S slim 
 systemctl start slim.service              
