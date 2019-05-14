@@ -45,6 +45,12 @@ pacman -S wpa_supplicant
 # configure sudo 
 #sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
+#Install xorg
+pacman -S xorg xorg-server
+
+#Install #xfce
+pacman -S xfce4 xfce4-goodies 
+
 #Remove script
 rm script*
 
