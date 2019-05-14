@@ -51,6 +51,13 @@ pacman -S xorg xorg-server
 #Install #xfce
 pacman -S xfce4 xfce4-goodies 
 
+#Install slim
+pacman -S slim 
+systemctl start slim.service              
+systemctl enable slim.service 
+
+echo exec startxfce4 > ~/.xinitrc
+
 #Remove script
 rm script*
 
