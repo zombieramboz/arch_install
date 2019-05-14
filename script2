@@ -20,9 +20,9 @@ echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/lo
 read -p "Press [Enter] to continue..."
 
 #Wireless-yes[******NOT WORKING******]
-pacman -S wireless-tools
+pacman -S wireless_tools
 pacman -S dialog 
-pacman -S wpa-supplicant 
+pacman -S wpa_supplicant 
 #cat > /etc/netctl/wireless_profile
 echo Description='Script generated profile' > /etc/netctl/wireless_profile 
 echo Interface="$(iwconfig 2>/dev/null | grep -o "^\w*")" >> /etc/netctl/wireless_profile 
