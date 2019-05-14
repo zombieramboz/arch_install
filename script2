@@ -13,9 +13,7 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #passwd root
 
 #Create user
-#useradd -m -G wheel -s /bin/bash adrian
-#echo Created new user adrian 
-#passwd adrian
+useradd -m -G wheel -s /bin/bash adrian
 
 #Set hostname
 echo arch > /etc/hostname
