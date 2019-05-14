@@ -13,8 +13,8 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 read -rsp $'Press any key to continue...\n' -n1 key
 
 #Set root password
-#echo "Set root password"
-#passwd root
+echo "Set root password"
+passwd root
 
 #Create user
 useradd -m -G wheel -s /bin/bash adrian
