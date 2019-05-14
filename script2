@@ -35,7 +35,7 @@ pacman -S wpa_supplicant
 #netctl start wireless_profile
 
 #Set root password
-sh -c 'echo username:password | chpasswd
+passwd root
 
 #Remove script
 rm script*
