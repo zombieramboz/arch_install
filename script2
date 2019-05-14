@@ -21,6 +21,7 @@ read -p "Press [Enter] to continue..."
 
 #Wireless-yes[******NOT WORKING******]
 pacman -S wireless-tools -yes
+read -p "Press [Enter] to continue..."
 pacman -S dialog -yes
 pacman -S wpa-supplicant -yes
 #cat > /etc/netctl/wireless_profile
