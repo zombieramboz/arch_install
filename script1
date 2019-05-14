@@ -30,17 +30,11 @@ mount /dev/sda1 /mnt/boot
 mkdir /mnt/home
 mount /dev/sda4 /mnt/home
 
-read -p "Press [Enter] to continue..."
-
 #Install base
 pacstrap /mnt base base-devel
 
-read -p "Press [Enter] to continue..."
-
 #Generate fstab
 genfstab -p -U /mnt > /mnt/etc/fstab
-
-read -p "Press [Enter] to continue..."
 
 #Fetch second script
 wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
