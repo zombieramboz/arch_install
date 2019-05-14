@@ -34,16 +34,16 @@ pacman -S wpa_supplicant
 
 #netctl enable wireless_profile
 #netctl start wireless_profile
-
+#------------------------------------
 #Install org
-pacman -S xorg xorg-server xorg-server-utils xorg-xinit xorg-twm xorg-xclock xterm
+#pacman -S xorg xorg-server xorg-server-utils xorg-xinit xorg-twm xorg-xclock xterm
 
 #Install xfce
-pacman -S xfce4 xfce4-goodies
+#pacman -S xfce4 xfce4-goodies
 
 #Install LightDM
-pacman -S lightdm lightdm-gtk-greeter 
-
+#pacman -S lightdm lightdm-gtk-greeter 
+#------------------------------------
 #Remove script
 rm script*
 
