@@ -14,6 +14,7 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 
 #Create user
 useradd -m -G wheel -s /bin/bash adrian
+passwd adrian
 
 #Set hostname
 echo arch > /etc/hostname
