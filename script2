@@ -40,6 +40,7 @@ passwd root
 
 # create user
 useradd -m -G wheel -s /bin/bash adrian
+echo Created new user adrian 
 passwd adrian
 
 # configure sudo 
