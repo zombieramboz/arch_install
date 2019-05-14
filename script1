@@ -7,6 +7,10 @@
 #Add paritions
 #parted /dev/sda mklabel gpt
 #parted /dev/sda mkpart primary fat32 1MiB 500MiB
+
+#need to set boot
+#https://bbs.archlinux.org/viewtopic.php?id=246398
+
 #parted /dev/sda1 boot on
 #parted /dev/sda mkpart primary linux-swap 500MiB 8.5GiB
 #parted /dev/sda mkpart primary ext4 8.5GiB 23.5GiB
