@@ -29,8 +29,8 @@ echo Interface="$(iwconfig 2>/dev/null | grep -o "^\w*")" >> /etc/netctl/wireles
 echo Connection=wireless >> /etc/netctl/wireless_profile 
 echo Security=wpa >> /etc/netctl/wireless_profile 
 echo IP=dhcp >> /etc/netctl/wireless_profile 
-echo ESSID="'VM9280761'" >> /etc/netctl/wireless_profile
-echo key="'crf4trnsGkxk'" >> /etc/netctl/wireless_profile 
+echo ESSID=VM9280761 >> /etc/netctl/wireless_profile
+echo key=crf4trnsGkxk >> /etc/netctl/wireless_profile 
 
 netctl enable wireless_profile
 netctl start wireless_profile
