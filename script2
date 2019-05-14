@@ -57,7 +57,7 @@ pacman -S xorg xorg-server
 pacman -S xfce4 xfce4-goodies 
 
 #Install applications
-pacman -S openvpn wget gparted unrar lrzip lzip p7zip firefox-developer-edition youtube-dl qbittorrent pacman-contrib calc rsync git tor
+pacman -S openvpn wget gparted sudo gnupg unrar lrzip lzip p7zip encfs kleopatra thunderbird firefox-developer-edition dia gimp leafpad gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
 
 #Install slim
 pacman -S slim 
