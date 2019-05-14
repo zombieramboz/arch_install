@@ -1,5 +1,6 @@
 #Time zone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
+timedatectl set-ntp true 
 
 #Localisation
 sed -i '/^#en_GB.UTF*/ s/^#//' /etc/locale.gen
@@ -8,8 +9,13 @@ echo LANG=en_GB.UTF-8 > /etc/locale.conf
 echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 
 #Set root password
-echo "Set root password"
-passwd root
+#echo "Set root password"
+#passwd root
+
+#Create user
+#useradd -m -G wheel -s /bin/bash adrian
+#echo Created new user adrian 
+#passwd adrian
 
 #Set hostname
 echo arch > /etc/hostname
@@ -37,11 +43,6 @@ pacman -S wpa_supplicant
 #echo key=XXXXXXXX >> /etc/netctl/wireless_profile 
 #netctl enable wireless_profile
 #netctl start wireless_profile
-
-# create user
-#useradd -m -G wheel -s /bin/bash adrian
-#echo Created new user adrian 
-#passwd adrian
 
 # configure sudo 
 #sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
