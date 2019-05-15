@@ -2,15 +2,11 @@
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 timedatectl set-ntp true 
 
-read -rsp $'Press any key to continue...\n' -n1 key
-
 #Localisation
 sed -i '/^#en_GB.UTF*/ s/^#//' /etc/locale.gen
 locale-gen
 echo LANG=en_GB.UTF-8 > /etc/locale.conf  
 echo KEYMAP=uk.map.gz > /etc/vconsole.conf
-
-read -rsp $'Press any key to continue...\n' -n1 key
 
 #Set root password
 echo "Set root password"
