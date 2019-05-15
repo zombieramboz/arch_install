@@ -44,7 +44,7 @@ pacman -S wpa_supplicant
 #netctl start wireless_profile
 
 # configure sudo 
-#sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 #Install xorg
 pacman -S xorg xorg-server
@@ -52,8 +52,11 @@ pacman -S xorg xorg-server
 #Install #xfce
 pacman -S xfce4 xfce4-goodies 
 
-#Install applications
-pacman -S openvpn wget gparted sudo gnupg unrar lrzip lzip p7zip encfs pidgin kleopatra thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
+#Install applications (my stuff)
+pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
+
+#Install applications (Humbers stuff)
+pacman -S inotify-tools cryfs gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins
 
 #Install slim
 pacman -S slim 
