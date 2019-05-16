@@ -2,7 +2,7 @@
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 timedatectl set-ntp true 
 
-#Temporarily set keyboard
+#Set keymap for current session
 loadkeys uk
 
 #Localisation[******NOT WORKING******]
