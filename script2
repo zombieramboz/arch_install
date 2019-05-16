@@ -12,7 +12,7 @@ timedatectl set-ntp true
 loadkeys uk
 
 ######################################
-#Localisation[******NOT WORKING******]
+#Localisation
 ######################################
 
 #https://wiki.archlinux.org/index.php/Linux_console/Keyboard_configuration
