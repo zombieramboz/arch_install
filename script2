@@ -1,4 +1,4 @@
-#Time zone
+locales#Time zone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 timedatectl set-ntp true 
 
@@ -10,29 +10,29 @@ echo LANG=en_GB.UTF-8 > /etc/locale.conf
 echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 
 #Set root password
-#echo "Set root password"
-#passwd root
+echo "Set root password"
+passwd root
 
 #Create user
-#useradd -m -G wheel -s /bin/bash adrian
-#passwd adrian
+useradd -m -G wheel -s /bin/bash adrian
+passwd adrian
 
 #Set hostname
-#echo arch > /etc/hostname
+echo arch > /etc/hostname
 
 #Install bootctl
-#bootctl install
+bootctl install
 
 #Configure  EFI
-#echo title Archlinux > /boot/loader/entries/arch.conf
-#echo linux /vmlinuz-linux >> /boot/loader/entries/arch.conf
-#echo initrd /initramfs-linux.img >> /boot/loader/entries/arch.conf
-#echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
+echo title Archlinux > /boot/loader/entries/arch.conf
+echo linux /vmlinuz-linux >> /boot/loader/entries/arch.conf
+echo initrd /initramfs-linux.img >> /boot/loader/entries/arch.conf
+echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
 
 #Wireless-yes[******NOT WORKING******]
-#pacman -S wireless_tools
-#pacman -S dialog 
-#pacman -S wpa_supplicant 
+pacman -S wireless_tools
+pacman -S dialog 
+pacman -S wpa_supplicant 
 
 #echo Description="'Script generated profile'" > /etc/netctl/wireless_profile 
 #echo Interface="$(iwconfig 2>/dev/null | grep -o "^\w*")" >> /etc/netctl/wireless_profile 
@@ -45,29 +45,29 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #netctl start wireless_profile
 
 # configure sudo 
-#sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 #Install xorg
-#pacman -S xorg xorg-server
+pacman -S xorg xorg-server
 
 #Install #xfce
-#pacman -S xfce4 xfce4-goodies 
+pacman -S xfce4 xfce4-goodies 
 
 #Install applications (my stuff)
-#pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
+pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
 
 #Install applications (Humbers stuff)
-#pacman -S inotify-tools cryfs calligra gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins
+pacman -S inotify-tools cryfs calligra gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins
 
 #Install slim
-#pacman -S slim 
-#systemctl start slim.service              
-#systemctl enable slim.service 
+pacman -S slim 
+systemctl start slim.service              
+systemctl enable slim.service 
 
-#echo exec startxfce4 > /home/adrian/.xinitrc
+echo exec startxfce4 > /home/adrian/.xinitrc
 
 #Remove script
-#rm script*
+rm script*
 
 
 
