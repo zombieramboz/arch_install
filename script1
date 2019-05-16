@@ -1,10 +1,13 @@
 #Optimised for Dell Latitude, 240GB SSD, 8GB RAM. 
 
-#Delete partitions
-#umount /mnt*
-#dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
+######################################
+#Delete partitions[WIP]
+######################################
 
-#Add paritions
+######################################
+#Add paritions[WIP]
+######################################
+
 #parted /dev/sda mklabel gpt
 #parted /dev/sda mkpart primary fat32 1MiB 500MiB
 
@@ -16,40 +19,70 @@
 #parted /dev/sda mkpart primary ext4 8.5GiB 23.5GiB
 #parted /dev/sda mkpart primary ext4 23.5GiB 100%
 
+######################################
 #Format partitions
+######################################
+
 mkfs.vfat /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
 mkfs.ext4 /dev/sda3 
 mkfs.ext4 /dev/sda4 
 
+######################################
 #Mount partitions
+######################################
+
 mount /dev/sda3 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 mkdir /mnt/home
 mount /dev/sda4 /mnt/home
 
+######################################
 #Update pacman
+######################################
+
 pacman -Syy
 
+######################################
 #Install base
+######################################
+
 pacstrap /mnt base base-devel
 
+######################################
 #Generate fstab
+######################################
+
 genfstab -p -U /mnt > /mnt/etc/fstab
 
+######################################
 #Fetch second script
+######################################
+
 wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
 
+######################################
 #Chmod script2
+######################################
+
 chmod +x script2
 
+######################################
 # copy the second script
+######################################
+
 cp script2 /mnt/script2
 
+######################################
 #Delete old scripts
+######################################
+
 rm script*
 
+######################################
 #Execute script2
+######################################
+
 arch-chroot /mnt ./script2
