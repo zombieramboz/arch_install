@@ -33,7 +33,8 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #Not working. Possibly because of keboard setup
 
 echo "Set root password"
-read 
+read my_password
+echo $my_password
 passwd root
 
 
@@ -46,7 +47,8 @@ passwd root
 
 useradd -m -G wheel -s /bin/bash adrian
 echo "User adrian created"
-read 
+read my_password
+echo $my_password 
 passwd adrian
 
 ######################################
