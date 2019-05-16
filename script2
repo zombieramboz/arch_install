@@ -15,7 +15,7 @@ loadkeys uk
 #Localisation
 ######################################
 
-#Notes
+#Notes:
 #GUI overrides these settings
 #https://wiki.archlinux.org/index.php/Linux_console/Keyboard_configuration
 
@@ -29,12 +29,18 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #Set root password
 ######################################
 
+#Notes:
+#Not working. Possibly because of keboard setup
+
 #echo "Set root password"
 #passwd root
 
 ######################################
 #Create user
 ######################################
+
+#Notes:
+#Not working. Possibly because of keboard setup
 
 useradd -m -G wheel -s /bin/bash adrian
 read -p "User adrian created"
