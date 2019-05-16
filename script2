@@ -1,4 +1,4 @@
-locales#Time zone
+#Time zone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 timedatectl set-ntp true 
 
