@@ -4,6 +4,7 @@ timedatectl set-ntp true
 
 #Localisation
 sed -i '/^#en_GB.UTF*/ s/^#//' /etc/locale.gen
+sed -i '/^en_US.UTF*/ s/^#*/#/' /etc/locale.gen
 
 read -p "Press enter to continue"
 
