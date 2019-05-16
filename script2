@@ -15,6 +15,7 @@ passwd root
 
 #Create user
 useradd -m -G wheel -s /bin/bash adrian
+read -p "User adrian created"
 passwd adrian
 
 #Set hostname
