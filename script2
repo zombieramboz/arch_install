@@ -33,7 +33,7 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #Not working. Possibly because of keboard setup
 
 echo "Set root password"
-read "test text input
+read "test text input"
 passwd root
 
 
