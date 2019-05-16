@@ -46,7 +46,7 @@ passwd root
 
 useradd -m -G wheel -s /bin/bash adrian
 echo "User adrian created"
-read "test text input
+read "test text input"
 passwd adrian
 
 ######################################
