@@ -32,10 +32,10 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #Notes:
 #Not working. Possibly because of keboard setup
 
-echo "Set root password"
-read my_password
-echo $my_password
-passwd root
+#echo "Set root password"
+#read my_password
+#echo $my_password
+#passwd root
 
 
 ######################################
@@ -45,11 +45,11 @@ passwd root
 #Notes:
 #Not working. Possibly because of keboard setup
 
-useradd -m -G wheel -s /bin/bash adrian
-echo "User adrian created"
-read my_password
-echo $my_password 
-passwd adrian
+#useradd -m -G wheel -s /bin/bash adrian
+#echo "User adrian created"
+#read my_password
+#echo $my_password 
+#passwd adrian
 
 ######################################
 #Set hostname
