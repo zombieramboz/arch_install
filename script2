@@ -56,7 +56,7 @@ pacman -S xfce4 xfce4-goodies
 pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
 
 #Install applications (Humbers stuff)
-pacman -S inotify-tools cryfs gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins
+pacman -S inotify-tools cryfs calligra gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins
 
 #Install slim
 pacman -S slim 
