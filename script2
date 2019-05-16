@@ -29,8 +29,8 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #Set root password
 ######################################
 
-echo "Set root password"
-passwd root
+#echo "Set root password"
+#passwd root
 
 ######################################
 #Create user
@@ -38,7 +38,7 @@ passwd root
 
 useradd -m -G wheel -s /bin/bash adrian
 read -p "User adrian created"
-passwd adrian
+#passwd adrian
 
 ######################################
 #Set hostname
