@@ -2,6 +2,9 @@
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 timedatectl set-ntp true 
 
+#Temporarily set keyboard
+loadkeys uk
+
 #Localisation[******NOT WORKING******]
 sed -i '/^#en_GB.UTF*/ s/^#//' /etc/locale.gen
 sed -i '/^en_US.UTF*/ s/^#*/#/' /etc/locale.gen
