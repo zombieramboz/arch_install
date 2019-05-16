@@ -95,7 +95,8 @@ pacman -S xorg xorg-server
 #Install #xfce
 ######################################
 
-pacman -S xfce4 xfce4-goodies 
+pacman -S xfce4 
+#pacman -S xfce4-goodies 
 
 ######################################
 #Install applications (my stuff)
