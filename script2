@@ -100,7 +100,7 @@ sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 #Install xorg
 ######################################
 
-pacman -S xorg xorg-server --noconfirm
+pacman -S xorg xorg-xinit xorg-server --noconfirm
 
 ######################################
 #Install xfce
