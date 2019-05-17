@@ -122,6 +122,7 @@ systemctl enable slim.service
 ######################################
 
 echo exec startxfce4 > /home/adrian/.xinitrc
+read -p "Press [Enter] key to continue..."
 
 ######################################
 #Install applications (my stuff)
