@@ -107,27 +107,27 @@ pacman -S xorg xorg-server --noconfirm
 ######################################
 
 pacman -S xfce4 --noconfirm
-#pacman -S xfce4-goodies --noconfirm
+pacman -S xfce4-goodies --noconfirm
 
 ######################################
 #Install slim
 ######################################
 
 #pacman -S slim 
-#systemctl start slim.service              
-#systemctl enable slim.service 
+systemctl start slim.service              
+systemctl enable slim.service 
 
 ######################################
 #Configure XFCE
 ######################################
 
-#echo exec startxfce4 > /home/adrian/.xinitrc
+echo exec startxfce4 > /home/adrian/.xinitrc
 
 ######################################
 #Install applications (my stuff)
 ######################################
 
-#pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
+pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
 
 ######################################
 #Install applications (Humbers stuff)
