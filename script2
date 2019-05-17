@@ -127,13 +127,13 @@ echo exec startxfce4 > /home/adrian/.xinitrc
 #Install applications (my stuff)
 ######################################
 
-pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor
+pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor --noconfirm
 
 ######################################
 #Install applications (Humbers stuff)
 ######################################
 
-#pacman -S inotify-tools cryfs calligra gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins
+#pacman -S inotify-tools cryfs calligra gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins --noconfirm
 
 ######################################
 #Remove script
