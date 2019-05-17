@@ -45,7 +45,9 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #Notes:
 #Password not working. Possibly because of keboard setup
 
-useradd -m -g users -G wheel,games,power,optical,storage,scanner,lp,audio,video -s /bin/bash adrian
+useradd -m -G wheel -s /bin/bash adrian
+#useradd -m -g users -G wheel,games,power,optical,storage,scanner,lp,audio,video -s /bin/bash adrian
+
 #echo "User adrian created"
 #read my_password
 #echo $my_password 
