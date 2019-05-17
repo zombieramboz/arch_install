@@ -8,6 +8,9 @@
 #Add partitions[WIP]
 ######################################
 
+#TODO
+#Automate swap caclcualtion by getting memoory with "grep MemTotal /proc/meminfo | awk '{print $2}'"  
+
 #Notes
 #https://bbs.archlinux.org/viewtopic.php?id=246398
 
