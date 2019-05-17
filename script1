@@ -4,7 +4,7 @@
 #Delete partitions
 ######################################
 
-#shred /dev/sda
+#shred /dev/sda --noconfirm
 
 ######################################
 #Add partitions[WIP]
@@ -16,10 +16,10 @@
 #Notes
 #https://bbs.archlinux.org/viewtopic.php?id=246398
 
-parted /dev/sda mklabel gpt
-parted /dev/sda mkpart primary fat32 1MiB 500MiB
-parted /dev/sda mkpart primary linux-swap 500MiB 8.5GiB
-parted /dev/sda mkpart primary ext4 8.5GiB 23.5GiB
+parted /dev/sda mklabel gpt --noconfirm
+parted /dev/sda mkpart primary fat32 1MiB 500MiB 
+parted /dev/sda mkpart primary linux-swap 500MiB 8.5GiB 
+parted /dev/sda mkpart primary ext4 8.5GiB 23.5GiB 
 parted /dev/sda mkpart primary ext4 23.5GiB 100%
 parted /dev/sda set 1 esp on
 
