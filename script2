@@ -4,6 +4,7 @@
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 timedatectl set-ntp true 
+hwclock -w --localtime
 
 ######################################
 #Set keymap for current session
