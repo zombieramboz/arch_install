@@ -4,7 +4,7 @@
 #Delete partitions
 ######################################
 
-shred /dev/sda --noconfirm
+shred /dev/sda
 
 ######################################
 #Refresh partition table (to avoid having to reboot)
