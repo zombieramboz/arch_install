@@ -110,19 +110,19 @@ pacman -S xfce4 --noconfirm
 pacman -S xfce4-goodies --noconfirm
 
 ######################################
+#Configure XFCE
+######################################
+
+echo exec startxfce4 > /home/adrian/.xinitrc
+read -p "Press [Enter] key to continue..."
+
+######################################
 #Install slim
 ######################################
 
 #pacman -S slim 
 systemctl start slim.service              
 systemctl enable slim.service 
-
-######################################
-#Configure XFCE
-######################################
-
-echo exec startxfce4 > /home/adrian/.xinitrc
-read -p "Press [Enter] key to continue..."
 
 ######################################
 #Install applications (my stuff)
