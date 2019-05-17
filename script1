@@ -1,8 +1,10 @@
 #Optimised for Dell Latitude, 240GB SSD, 8GB RAM. 
 
 ######################################
-#Delete partitions[WIP]
+#Delete partitions
 ######################################
+
+#shred /dev/sda
 
 ######################################
 #Add partitions[WIP]
