@@ -13,7 +13,7 @@ shred /dev/sda
 partprobe /dev/sda
 
 ######################################
-#Add partitions[WIP]
+#Add partitions
 ######################################
 
 #TODO
