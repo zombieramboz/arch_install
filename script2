@@ -76,9 +76,9 @@ echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/lo
 #Wireless-yes[******NOT WORKING******]
 ######################################
 
-pacman -S wireless_tools
-pacman -S dialog 
-pacman -S wpa_supplicant 
+pacman -S wireless_tools --noconfirm
+pacman -S dialog --noconfirm
+pacman -S wpa_supplicant --noconfirm
 
 #echo Description="'Script generated profile'" > /etc/netctl/wireless_profile 
 #echo Interface="$(iwconfig 2>/dev/null | grep -o "^\w*")" >> /etc/netctl/wireless_profile 
@@ -100,14 +100,14 @@ sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 #Install xorg
 ######################################
 
-pacman -S xorg xorg-server
+pacman -S xorg xorg-server --noconfirm
 
 ######################################
 #Install #xfce
 ######################################
 
-pacman -S xfce4 
-#pacman -S xfce4-goodies 
+pacman -S xfce4 --noconfirm
+#pacman -S xfce4-goodies --noconfirm
 
 ######################################
 #Install slim
