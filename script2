@@ -1,16 +1,16 @@
 ######################################
+#Set keymap for current session
+######################################
+
+loadkeys uk
+
+######################################
 #Time zone
 ######################################
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 timedatectl set-ntp true 
 hwclock -w --localtime
-
-######################################
-#Set keymap for current session
-######################################
-
-loadkeys uk
 
 ######################################
 #Localisation
@@ -25,6 +25,7 @@ sed -i '/^en_US.UTF*/ s/^#*/#/' /etc/locale.gen
 locale-gen
 echo LANG=en_GB.UTF-8 > /etc/locale.conf  
 echo KEYMAP=uk.map.gz > /etc/vconsole.conf
+export LANG=en_GB.UTF-8
 
 ######################################
 #Set root password
@@ -47,6 +48,7 @@ echo KEYMAP=uk.map.gz > /etc/vconsole.conf
 #Password not working. Possibly because of keboard setup
 
 useradd -m -G wheel -s /bin/bash adrian
+useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner -s /bin/bash user
 #useradd -m -g users -G wheel,games,power,optical,storage,scanner,lp,audio,video -s /bin/bash adrian
 
 #echo "User adrian created"
