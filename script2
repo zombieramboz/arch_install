@@ -10,7 +10,6 @@ loadkeys uk
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 timedatectl set-ntp true 
-hwclock -w --localtime
 
 ######################################
 #Localisation
