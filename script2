@@ -110,6 +110,20 @@ pacman -S xfce4
 #pacman -S xfce4-goodies 
 
 ######################################
+#Install slim
+######################################
+
+pacman -S slim 
+systemctl start slim.service              
+systemctl enable slim.service 
+
+######################################
+#Configure XFCE
+######################################
+
+echo exec startxfce4 > /home/adrian/.xinitrc
+
+######################################
 #Install applications (my stuff)
 ######################################
 
@@ -120,16 +134,6 @@ pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zi
 ######################################
 
 pacman -S inotify-tools cryfs calligra gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins
-
-######################################
-#Install slim
-######################################
-
-pacman -S slim 
-systemctl start slim.service              
-systemctl enable slim.service 
-
-echo exec startxfce4 > /home/adrian/.xinitrc
 
 ######################################
 #Remove script
