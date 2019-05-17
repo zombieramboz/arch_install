@@ -113,7 +113,7 @@ pacman -S xfce4-goodies --noconfirm
 #Configure XFCE
 ######################################
 
-echo exec startxfce4 > /home/adrian/.xinitrc
+echo exec startxfce4 > ~/.xinitrc
 read -p "Press [Enter] key to continue..."
 
 ######################################
