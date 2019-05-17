@@ -4,6 +4,9 @@
 #Delete partitions
 ######################################
 
+#TODO
+#Workaround to having to reboot for change to take effect. 
+
 #shred /dev/sda --noconfirm
 
 ######################################
