@@ -128,8 +128,8 @@ echo exec startxfce4 > /home/adrian/.xinitrc
 #Install LightDM
 ######################################
 
-pacman -S lightdm
-pacman -S lightdm-gtk-greeter
+pacman -S lightdmm --noconfirm
+pacman -S lightdm-gtk-greeter --noconfirm
 systemctl enable lightdm.service
 
 ######################################
