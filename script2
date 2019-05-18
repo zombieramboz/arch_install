@@ -125,12 +125,12 @@ cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
 echo exec startxfce4 > /home/adrian/.xinitrc
 
 ######################################
-#Install slim
+#Install LightDM
 ######################################
 
-pacman -S slim 
-systemctl start slim.service              
-systemctl enable slim.service 
+pacman -S lightdm
+pacman -S lightdm-gtk-greeter
+systemctl enable lightdm.service
 
 ######################################
 #Install applications (my stuff)
