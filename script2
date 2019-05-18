@@ -130,7 +130,7 @@ echo exec startxfce4 > /home/adrian/.xinitrc
 
 pacman -S lightdmm --noconfirm
 pacman -S lightdm-gtk-greeter --noconfirm
-systemctl enable lightdm.service
+systemctl start lightdm.service && systemctl enable lightdm.service
 
 ######################################
 #Install applications (my stuff)
