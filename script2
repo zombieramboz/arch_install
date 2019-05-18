@@ -129,6 +129,7 @@ echo exec startxfce4 > /home/adrian/.xinitrc
 ######################################
 
 pacman -S  xorg-xdm --noconfirm
+startxfce4  >> /home/adrian/.xsession
 enable xdm.service
 
 ######################################
