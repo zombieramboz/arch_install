@@ -47,7 +47,6 @@ export LANG=en_GB.UTF-8
 #Password not working. Possibly because of keboard setup
 
 useradd -m -G wheel -s /bin/bash adrian
-useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner -s /bin/bash user
 #useradd -m -g users -G wheel,games,power,optical,storage,scanner,lp,audio,video -s /bin/bash adrian
 
 #echo "User adrian created"
