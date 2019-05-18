@@ -5,7 +5,7 @@
 loadkeys uk
 
 ######################################
-#Time zone[WORKING?]
+#Time zone
 ######################################
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
