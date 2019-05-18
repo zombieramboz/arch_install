@@ -118,7 +118,6 @@ pacman -S xfce4-goodies --noconfirm
 ######################################
 
 echo exec startxfce4 > ~/.xinitrc
-read -p "Press [Enter] key to continue..."
 
 ######################################
 #Install slim
@@ -145,6 +144,10 @@ systemctl enable slim.service
 ######################################
 
 rm script*
+
+#Useful
+#read -p "Press [Enter] key to continue..."
+
 
 
 
