@@ -99,7 +99,7 @@ pacman -S wpa_supplicant --noconfirm
 sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 ######################################
-#Install alsa-utils
+#Install alsa-utils[WIP]
 ######################################
 
 pacman -S alsa-utils
