@@ -125,7 +125,7 @@ cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
 echo exec startxfce4 > /home/adrian/.xinitrc
 
 ######################################
-#Install xorg-xdm
+#Install xdm
 ######################################
 
 pacman -S  xorg-xdm --noconfirm
