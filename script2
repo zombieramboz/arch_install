@@ -125,12 +125,11 @@ cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
 echo exec startxfce4 > /home/adrian/.xinitrc
 
 ######################################
-#Install LightDM
+#Install xorg-xdm
 ######################################
 
-pacman -S lightdmm --noconfirm
-pacman -S lightdm-gtk-greeter --noconfirm
-systemctl start lightdm.service && systemctl enable lightdm.service
+pacman -S  xorg-xdm --noconfirm
+enable xdm.service
 
 ######################################
 #Install applications (my stuff)
