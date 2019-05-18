@@ -116,7 +116,7 @@ pacman -S xfce4-goodies --noconfirm
 #Configure XFCE
 ######################################
 
-echo exec startxfce4 > ~/.xinitrc
+echo exec startxfce4 > /home/adrian/.xinitrc
 
 ######################################
 #Install slim
