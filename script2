@@ -121,8 +121,8 @@ pacman -S xfce4-goodies --noconfirm
 #Configure XFCE
 ######################################
 
-cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
-echo exec startxfce4 > /home/adrian/.xinitrc
+#cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
+#echo exec startxfce4 > /home/adrian/.xinitrc
 
 ######################################
 #Install xdm
@@ -137,7 +137,7 @@ enable xdm.service
 #Install applications (my stuff)
 ######################################
 
-pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor --noconfirm
+#pacman -S wget gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor --noconfirm
 
 ######################################
 #Install applications (Humbers stuff)
