@@ -129,7 +129,7 @@ pacman -S xfce4-goodies --noconfirm
 ######################################
 
 pacman -S  xorg-xdm --noconfirm
-echo startxfce4  >> /home/adrian/.xsession
+echo startxfce4  > /home/adrian/.xsession
 chmod 700 /home/adrian/.xsession
 enable xdm.service
 
