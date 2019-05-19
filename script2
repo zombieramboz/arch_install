@@ -130,6 +130,7 @@ echo exec startxfce4 > /home/adrian/.xinitrc
 
 pacman -S  xorg-xdm --noconfirm
 echo startxfce4  >> /home/adrian/.xsession
+chmod 700 /home/adrian/.xsession
 enable xdm.service
 
 ######################################
