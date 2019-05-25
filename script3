@@ -40,6 +40,12 @@ chmod 700 /home/adrian/.xsession
 systemctl enable xdm-archlinux.service
 
 ######################################
+#Set keyboard
+######################################
+
+localectl set-x11-keymap gb
+
+######################################
 #Install applications (my stuff)
 ######################################
 
