@@ -53,6 +53,12 @@ useradd -m -G wheel,games,power,optical,storage,scanner,lp,audio,video -s /bin/b
 #passwd adrian
 
 ######################################
+# configure sudo 
+######################################
+
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+
+######################################
 #Set hostname
 ######################################
 
