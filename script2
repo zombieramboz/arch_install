@@ -136,6 +136,9 @@ pacman -S xfce4-goodies --noconfirm
 #Install lightdm
 ######################################
 
+#Notes:
+#https://linoxide.com/linux-how-to/install-lightdm-arch-linux/
+
 pacman -S lightdm --noconfirm
 systemctl start lightdm.service && systemctl enable lightdm.service
 
