@@ -92,12 +92,6 @@ pacman -S wpa_supplicant --noconfirm
 #netctl start wireless_profile
 
 ######################################
-# configure sudo 
-######################################
-
-sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
-
-######################################
 #Remove script
 ######################################
 
