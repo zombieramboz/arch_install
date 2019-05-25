@@ -38,7 +38,6 @@ export LANG=en_GB.UTF-8
 #echo $my_password
 #passwd root
 
-
 ######################################
 #Create user
 ######################################
@@ -128,8 +127,8 @@ echo exec startxfce4 >> /home/adrian/.xinitrc
 #Install xdm
 ######################################
 
-pacman -S  xorg-xdm --noconfirm
-echo startxfce4  > /home/adrian/.xsession
+pacman -S xorg-xdm --noconfirm
+echo startxfce4 > /home/adrian/.xsession
 chmod 700 /home/adrian/.xsession
 systemctl enable xdm.service
 
