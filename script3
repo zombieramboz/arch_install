@@ -2,13 +2,7 @@
 #Install alsa-utils[WIP]
 ######################################
 
-pacman -S alsa-utils
-
-######################################
-# configure sudo 
-######################################
-
-sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+#pacman -S alsa-utils
 
 ######################################
 #Install xorg
@@ -21,7 +15,7 @@ pacman -S xorg xorg-xinit xorg-server --noconfirm
 ######################################
 
 pacman -S xfce4 --noconfirm
-pacman -S xfce4-goodies --noconfirm
+#pacman -S xfce4-goodies --noconfirm
 
 ######################################
 #Configure XFCE
@@ -34,10 +28,11 @@ pacman -S xfce4-goodies --noconfirm
 #Install xdm
 ######################################
 
-#pacman -S xorg-xdm --noconfirm
-#echo startxfce4 > /home/adrian/.xsession
-#chmod 700 /home/adrian/.xsession
-s#ystemctl enable xdm.service
+pacman -S xorg-xdm --noconfirm
+echo startxfce4 > /home/adrian/.xsession
+chmod 700 /home/adrian/.xsession
+systemctl start xdm.service
+systemctl enable xdm.service
 
 ######################################
 #Install lightdm
@@ -46,9 +41,9 @@ s#ystemctl enable xdm.service
 #Notes:
 #https://linoxide.com/linux-how-to/install-lightdm-arch-linux/
 
-pacman -S lightdm --noconfirm
-systemctl start lightdm.service && systemctl enable lightdm.service
-pacman -S lightdm-gtk-greeter --noconfirm
+#pacman -S lightdm --noconfirm
+#systemctl start lightdm.service && systemctl enable lightdm.service
+#pacman -S lightdm-gtk-greeter --noconfirm
 
 ######################################
 #Install applications (my stuff)
