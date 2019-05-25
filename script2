@@ -127,10 +127,17 @@ pacman -S xfce4-goodies --noconfirm
 #Install xdm
 ######################################
 
-pacman -S xorg-xdm --noconfirm
-echo startxfce4 > /home/adrian/.xsession
-chmod 700 /home/adrian/.xsession
-systemctl enable xdm.service
+#pacman -S xorg-xdm --noconfirm
+#echo startxfce4 > /home/adrian/.xsession
+#chmod 700 /home/adrian/.xsession
+#systemctl enable xdm.service
+
+######################################
+#Install lightdm
+######################################
+
+pacman -S lightdm --noconfirm
+systemctl enable lightdm.service 
 
 ######################################
 #Install applications (my stuff)
