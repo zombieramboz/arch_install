@@ -122,7 +122,7 @@ pacman -S xfce4-goodies --noconfirm
 ######################################
 
 #cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
-#echo exec startxfce4 > /home/adrian/.xinitrc
+#echo exec startxfce4 >> /home/adrian/.xinitrc
 
 ######################################
 #Install xdm
