@@ -34,10 +34,10 @@ pacman -S xfce4-goodies --noconfirm
 #Install xdm
 ######################################
 
-pacman -S xorg-xdm --noconfirm
-echo startxfce4 > /home/adrian/.xsession
-chmod 700 /home/adrian/.xsession
-systemctl enable xdm.service
+#pacman -S xorg-xdm --noconfirm
+#echo startxfce4 > /home/adrian/.xsession
+#chmod 700 /home/adrian/.xsession
+s#ystemctl enable xdm.service
 
 ######################################
 #Install lightdm
@@ -46,9 +46,9 @@ systemctl enable xdm.service
 #Notes:
 #https://linoxide.com/linux-how-to/install-lightdm-arch-linux/
 
-#pacman -S lightdm --noconfirm
-#systemctl start lightdm.service && systemctl enable lightdm.service
-#pacman -S lightdm-gtk-greeter --noconfirm
+pacman -S lightdm --noconfirm
+systemctl start lightdm.service && systemctl enable lightdm.service
+pacman -S lightdm-gtk-greeter --noconfirm
 
 ######################################
 #Install applications (my stuff)
