@@ -40,17 +40,6 @@ chmod 700 /home/adrian/.xsession
 systemctl enable xdm-archlinux.service
 
 ######################################
-#Install lightdm
-######################################
-
-#Notes:
-#https://linoxide.com/linux-how-to/install-lightdm-arch-linux/
-
-#pacman -S lightdm --noconfirm
-#systemctl start lightdm.service && systemctl enable lightdm.service
-#pacman -S lightdm-gtk-greeter --noconfirm
-
-######################################
 #Install applications (my stuff)
 ######################################
 
