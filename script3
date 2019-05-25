@@ -34,7 +34,7 @@ pacman -S xfce4 --noconfirm
 #Install xdm
 ######################################
 
-pacman -S xorg-xdm --noconfirm
+pacman -S xorg-xdm xdm-archlinux --noconfirm
 echo startxfce4 > /home/adrian/.xsession
 chmod 700 /home/adrian/.xsession
 systemctl start xdm.service
