@@ -70,7 +70,7 @@ localectl set-x11-keymap gb
 rm script*
 
 ######################################
-#Post scriot manual actions (eventually add to script when figured out
+#Post script manual actions (eventually add to script when figured out
 ######################################
 
 sudo echo startxfce4 > /home/adrian/.xsession
