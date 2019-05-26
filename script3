@@ -51,7 +51,7 @@ pacman -S xorg-xdm xdm-archlinux --noconfirm
 
 echo startxfce4 > /home/adrian/.xsession
 chmod 700 /home/adrian/.xsession
-chown /home/adrian/.xsession adrian
+chown adrian /home/adrian/.xsession 
 #systemctl enable xdm-archlinux.service
 
 ######################################
