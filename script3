@@ -34,10 +34,10 @@ echo exec startxfce4 >> /home/adrian/.xinitrc
 #Install xdm
 ######################################
 
-#pacman -S xorg-xdm xdm-archlinux --noconfirm
-#echo startxfce4 > /home/adrian/.xsession
-#chmod 700 /home/adrian/.xsession
-#systemctl enable xdm-archlinux.service
+pacman -S xorg-xdm xdm-archlinux --noconfirm
+echo startxfce4 > /home/adrian/.xsession
+chmod 700 /home/adrian/.xsession
+systemctl enable xdm-archlinux.service
 
 ######################################
 #Set keyboard
