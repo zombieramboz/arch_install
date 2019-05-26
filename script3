@@ -68,7 +68,7 @@ pacman -S sudo wget vim unrar unzip lrzip lzip p7zip firefox-developer-edition -
 #Install applications (my stuff)
 ######################################
 
-pacman -S openshot gparted gpart pacman-contrib pidgin thunderbird dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor --noconfirm
+#pacman -S openshot gparted gpart pacman-contrib pidgin thunderbird dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor --noconfirm
 
 ######################################
 #Install applications (Humbers stuff)
