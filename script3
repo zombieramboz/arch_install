@@ -49,7 +49,7 @@ pacman -S xorg-xdm xdm-archlinux --noconfirm
 #Configure xdm
 ######################################
 
-sudo echo startxfce4 > /home/adrian/.xsession
+echo startxfce4 > /home/adrian/.xsession
 chown adrian /home/adrian/.xsession
 systemctl enable xdm-archlinux.service
 
