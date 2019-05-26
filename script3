@@ -27,17 +27,17 @@ pacman -S xfce4 --noconfirm
 #Configure Xfce
 ######################################
 
-cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
-echo exec startxfce4 >> /home/adrian/.xinitrc
+#Notes
+#Handled by display manager (xdm)
+
+#cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
+#echo exec startxfce4 >> /home/adrian/.xinitrc
 
 ######################################
 #Install xdm
 ######################################
 
 pacman -S xorg-xdm xdm-archlinux --noconfirm
-echo startxfce4 > /home/adrian/.xsession
-chmod 700 /home/adrian/.xsession
-systemctl enable xdm-archlinux.service
 
 ######################################
 #Set keyboard
@@ -62,6 +62,14 @@ localectl set-x11-keymap gb
 ######################################
 
 rm script*
+
+######################################
+#Manual (eventually add to script when figured out
+######################################
+
+sudo echo startxfce4 > /home/adrian/.xsession
+chmod 700 /home/adrian/.xsession
+systemctl enable xdm-archlinux.service
 
 ######################################
 #Useful
