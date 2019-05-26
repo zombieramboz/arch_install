@@ -97,11 +97,6 @@ pacman -S wpa_supplicant --noconfirm
 #netctl enable wireless_profile
 #netctl start wireless_profile
 
-######################################
-#Remove script
-######################################
-
-rm script*
 
 
 
