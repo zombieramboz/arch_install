@@ -68,22 +68,25 @@ pacstrap /mnt base base-devel
 genfstab -p -U /mnt > /mnt/etc/fstab
 
 ######################################
-#Fetch second script
-######################################
+#Fetch other scripts
+#####################################
 
 wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
+wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script3
 
 ######################################
-#Chmod script2
+#Chmod script2 and script3
 ######################################
 
 chmod +x script2
+chmod +x script3
 
 ######################################
 # copy the second script
 ######################################
 
 cp script2 /mnt/script2
+cp script2 /mnt/script3
 
 ######################################
 #Delete old scripts
