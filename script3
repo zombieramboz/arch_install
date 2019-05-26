@@ -59,10 +59,16 @@ systemctl enable xdm-archlinux.service
 localectl set-x11-keymap gb
 
 ######################################
+#Install applications (essentials)
+######################################
+
+pacman -S sudo wget vim unrar unzip lrzip lzip p7zip firefox-developer-edition --noconfirm
+
+######################################
 #Install applications (my stuff)
 ######################################
 
-pacman -S wget openshot gparted gpart sudo pacman-contrib vim unrar unzip lrzip lzip p7zip pidgin thunderbird firefox-developer-edition dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor --noconfirm
+pacman -S openshot gparted gpart pacman-contrib pidgin thunderbird dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent pacman-contrib calc rsync git tor --noconfirm
 
 ######################################
 #Install applications (Humbers stuff)
