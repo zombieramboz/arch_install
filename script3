@@ -46,6 +46,12 @@ pacman -S xfce4 --noconfirm
 pacman -S xorg-xdm xdm-archlinux --noconfirm
 
 ######################################
+#Configure xdm
+######################################
+
+systemctl enable xdm-archlinux.service
+
+######################################
 #Set keyboard
 ######################################
 
@@ -75,7 +81,6 @@ rm script*
 
 sudo echo startxfce4 > /home/adrian/.xsession
 chmod 700 /home/adrian/.xsession
-systemctl enable xdm-archlinux.service
 
 ######################################
 #Useful
