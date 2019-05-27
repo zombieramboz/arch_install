@@ -24,4 +24,6 @@ lvcreate -l 100%FREE -n home Vol
 #mkdir /mnt/home
 #mount /dev/mapper/Vol-home /mnt/home
 
+pacstrap /mnt base base-devel
+
 genfstab -pU /mnt >> /mnt/etc/fstab
