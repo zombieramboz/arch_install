@@ -68,7 +68,7 @@ echo arch > /etc/hostname
 #Install bootctl
 ######################################
 
-bootctl install
+bootctl --path=/boot install
 
 ######################################
 #Configure  EFI
