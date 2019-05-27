@@ -1,0 +1,25 @@
+parted /dev/sda mklabel gpt
+parted /dev/sda mkpart primary fat32 1MiB 500MiB 
+parted /dev/sda mkpart primary ext4 500MiB 100%
+parted /dev/sda set 1 esp on
+
+cryptsetup -v luksFormat /dev/sda2
+cryptsetup luksOpen /dev/sda2 luks
+
+pvcreate /dev/sda2
+vgcreate Vol /dev/sda2
+lvcreate -L 8G -n swap Vol
+lvcreate -L 15G -n root Vol
+lvcreate -l 100%FREE -n home Vol
+
+mkfs.vfat -F32 /dev/sda1
+mkswap /dev/mapper/swap
+swapon /dev/mapper/swap
+mkfs.ext4 /dev/mapper/root
+mkfs.ext4 /dev/mapper/home
+
+mount /dev/mapper/root /mnt
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+mkdir /mnt/home
+mount /dev/mapper/home /mnt/home
