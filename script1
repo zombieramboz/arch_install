@@ -8,10 +8,17 @@
 #./script1
 
 ######################################
-#Delete partitions
+#Get Wipe
 ######################################
 
-#shred /dev/sda
+pacman -Sy
+pacman -S wipe
+
+######################################
+#Wipe partitions
+######################################
+
+wipe /dev/sda
 
 ######################################
 #Refresh partition table (to avoid having to reboot) [NOT WORKING]
