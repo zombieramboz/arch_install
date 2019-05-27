@@ -74,6 +74,9 @@ bootctl install
 #Configure  EFI
 ######################################
 
+#Notes:
+#https://www.youtube.com/watch?v=DfC5hgdtbWY
+
 echo title Archlinux > /boot/loader/entries/arch.conf
 echo linux /vmlinuz-linux >> /boot/loader/entries/arch.conf
 echo initrd /initramfs-linux.img >> /boot/loader/entries/arch.conf
