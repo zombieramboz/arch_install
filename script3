@@ -30,16 +30,6 @@ pacman -S xfce4 --noconfirm
 #pacman -S xfce4-goodies --noconfirm
 
 ######################################
-#Configure Xfce
-######################################
-
-#Notes
-#Handled by display manager (xdm)
-
-#cp /etc/X11/xinit/xinitrc /home/adrian/.xinitrc
-#echo exec startxfce4 >> /home/adrian/.xinitrc
-
-######################################
 #Install xdm
 ######################################
 
@@ -52,7 +42,7 @@ pacman -S xorg-xdm xdm-archlinux --noconfirm
 echo startxfce4 > /home/adrian/.xsession
 chmod 700 /home/adrian/.xsession
 chown adrian /home/adrian/.xsession 
-#systemctl enable xdm-archlinux.service
+systemctl enable xdm-archlinux.service
 
 ######################################
 #Set keyboard
@@ -95,8 +85,4 @@ rm script*
 #netctl enable {profile} (profile from /etc/netctl)
 #Note start gave me an error and had to login again for it to work
 
-######################################
-#Useful
-######################################
 
-#read -p "Press [Enter] key to continue..."
