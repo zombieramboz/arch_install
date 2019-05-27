@@ -11,18 +11,6 @@
 #chmod +x script1
 #./script1
 
-#mkfs.vfat -F32 /dev/sda1
-#mkswap /dev/mapper/Vol-swap
-#swapon /dev/mapper/Vol-swap
-#mkfs.ext4 /dev/mapper/Vol-root
-#mkfs.ext4 /dev/mapper/Vol-home
-
-#mount /dev/mapper/Vol-root /mnt
-#mkdir /mnt/boot
-#mount /dev/sda1 /mnt/boot
-#mkdir /mnt/home
-#mount /dev/mapper/Vol-home /mnt/home
-
 ######################################
 #Set keyboard
 ######################################
@@ -74,12 +62,6 @@ cryptsetup luksOpen /dev/sda2 luks
 #Create LVM partitions
 ######################################
 
-
-
-######################################
-#Format partitions
-######################################
-
 pvcreate /dev/mapper/luks
 vgcreate Vol /dev/mapper/luks
 lvcreate -L 8G -n swap Vol
@@ -87,14 +69,24 @@ lvcreate -L 15G -n root Vol
 lvcreate -l 100%FREE -n home Vol
 
 ######################################
+#Format partitions
+######################################
+
+#mkfs.vfat -F32 /dev/sda1
+#mkswap /dev/mapper/Vol-swap
+#swapon /dev/mapper/Vol-swap
+#mkfs.ext4 /dev/mapper/Vol-root
+#mkfs.ext4 /dev/mapper/Vol-home
+
+######################################
 #Mount partitions
 ######################################
 
-mount /dev/sda3 /mnt
-mkdir /mnt/boot
-mount /dev/sda1 /mnt/boot
-mkdir /mnt/home
-mount /dev/sda4 /mnt/home
+#mount /dev/mapper/Vol-root /mnt
+#mkdir /mnt/boot
+#mount /dev/sda1 /mnt/boot
+#mkdir /mnt/home
+#mount /dev/mapper/Vol-home /mnt/home
 
 ######################################
 #Update pacman
