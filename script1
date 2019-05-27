@@ -93,7 +93,7 @@ chmod +x script3
 ######################################
 
 cp script2 /mnt/script2
-cp script2 /mnt/script3
+cp script3 /mnt/script3
 
 ######################################
 #Delete old scripts
