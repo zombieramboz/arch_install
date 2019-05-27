@@ -2,13 +2,19 @@
 #Pre script manual actions
 ######################################
 
-#TODO
+#Set root password
+#Set user password
+#connect to wifi with wifi-menu
 
 ######################################
 #Install alsa-utils[WIP]
 ######################################
 
-#pacman -S alsa-utils
+#Notes:
+#https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Installation
+#https://www.alsa-project.org/main/index.php/Asoundrc
+
+pacman -S alsa-utils
 
 ######################################
 #Install intel video drivers
@@ -27,7 +33,7 @@ pacman -S xorg xorg-xinit xorg-server --noconfirm
 ######################################
 
 pacman -S xfce4 --noconfirm
-#pacman -S xfce4-goodies --noconfirm
+pacman -S xfce4-goodies --noconfirm
 
 ######################################
 #Install xdm
