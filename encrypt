@@ -23,3 +23,5 @@ lvcreate -l 100%FREE -n home Vol
 #mount /dev/sda1 /mnt/boot
 #mkdir /mnt/home
 #mount /dev/mapper/Vol-home /mnt/home
+
+genfstab -pU /mnt >> /mnt/etc/fstab
