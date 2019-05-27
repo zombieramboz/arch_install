@@ -85,10 +85,15 @@ pacman -S sudo wget vim unrar unzip lrzip lzip p7zip firefox-developer-edition -
 rm script*
 
 ######################################
-#Post script manual actions (eventually add to script when figured out
+#Post script manual actions 
 ######################################
 
-#chmod 700 /home/adrian/.xsession
+#On logging into GUI
+
+#connect to internet via wifi-menu
+#netctl start {profile} (profile from /etc/netctl)
+#netctl enable {profile} (profile from /etc/netctl)
+#Note start gave me an error and had to login again for it to work
 
 ######################################
 #Useful
