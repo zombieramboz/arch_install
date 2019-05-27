@@ -12,7 +12,7 @@ cryptsetup luksFormat /dev/sda2
 #lvcreate -L 15G -n root Vol
 #lvcreate -l 100%FREE -n home Vol
 
-mkfs.vfat -F32 /dev/sda1
+#mkfs.vfat -F32 /dev/sda1
 #mkswap /dev/mapper/swap
 #swapon /dev/mapper/swap
 #mkfs.ext4 /dev/mapper/root
