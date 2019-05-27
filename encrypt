@@ -13,13 +13,13 @@ lvcreate -L 15G -n root Vol
 lvcreate -l 100%FREE -n home Vol
 
 #mkfs.vfat -F32 /dev/sda1
-#mkswap /dev/mapper/swap
-#swapon /dev/mapper/swap
-#mkfs.ext4 /dev/mapper/root
-#mkfs.ext4 /dev/mapper/home
+#mkswap /dev/mapper/Vol-swap
+#swapon /dev/mapper/Vol-swap
+#mkfs.ext4 /dev/mapper/Vol-root
+#mkfs.ext4 /dev/mapper/Vol-home
 
-#mount /dev/mapper/root /mnt
+#mount /dev/mapper/Vol-root /mnt
 #mkdir /mnt/boot
 #mount /dev/sda1 /mnt/boot
 #mkdir /mnt/home
-#mount /dev/mapper/home /mnt/home
+#mount /dev/mapper/Vol-home /mnt/home
