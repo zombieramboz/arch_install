@@ -1,9 +1,9 @@
-parted /dev/sda mklabel gpt
-parted /dev/sda mkpart primary fat32 1MiB 500MiB 
-parted /dev/sda mkpart primary ext4 500MiB 100%
-parted /dev/sda set 1 esp on
+#parted /dev/sda mklabel gpt
+#parted /dev/sda mkpart primary fat32 1MiB 500MiB 
+#parted /dev/sda mkpart primary ext4 500MiB 100%
+#parted /dev/sda set 1 esp on
 
-cryptsetup -v luksFormat /dev/sda2
+cryptsetup luksFormat /dev/sda2
 cryptsetup luksOpen /dev/sda2 luks
 
 pvcreate /dev/sda2
