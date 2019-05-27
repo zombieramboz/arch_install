@@ -65,6 +65,12 @@ sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 echo arch > /etc/hostname
 
 ######################################
+#Install wifi tools
+######################################
+
+#TODO!!!!
+
+######################################
 #Install bootctl
 ######################################
 
