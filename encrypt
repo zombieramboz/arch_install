@@ -4,7 +4,7 @@ parted /dev/sda mkpart primary ext4 500MiB 100%
 parted /dev/sda set 1 esp on
 
 cryptsetup luksFormat /dev/sda2
-#cryptsetup luksOpen /dev/sda2 luks
+cryptsetup luksOpen /dev/sda2 luks
 
 #pvcreate /dev/sda2
 #vgcreate Vol /dev/sda2
