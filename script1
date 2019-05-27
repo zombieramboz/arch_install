@@ -1,4 +1,7 @@
+######################################
 #Notes:
+######################################
+
 #https://gist.github.com/heppu/6e58b7a174803bc4c43da99642b6094b
 #https://www.howtoforge.com/tutorial/how-to-install-arch-linux-with-full-disk-encryption/
 
@@ -41,7 +44,7 @@ pacman -S wipe
 ######################################
 
 #TODO
-#Automate swap caclculation by getting memoory with "grep MemTotal /proc/meminfo | awk '{print $2}'"  
+#Automate swap calculation by getting memoory with "grep MemTotal /proc/meminfo | awk '{print $2}'"  
 
 #Notes
 #https://bbs.archlinux.org/viewtopic.php?id=246398
