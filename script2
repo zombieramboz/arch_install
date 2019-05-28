@@ -68,7 +68,7 @@ echo arch > /etc/hostname
 #Install wifi tools
 ######################################
 
-pacman -S wpa_supplicant dialog wifi-menu
+pacman -S wpa_supplicant dialog
 
 
 ######################################
@@ -104,7 +104,7 @@ bootctl --path=/boot install
 #echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
 
 #Needs to be like below but not returning /dev/sda2 UUID (comes back blank)
-echo "options cryptdevice=UUID=<YOUR-PARTITION-UUID>:lvm:allow-discards resume=/dev/mapper/vg0-swap root=/dev/mapper/vg0-root rw quiet"
+echo "options cryptdevice=UUID=<YOUR-PARTITION-UUID>:lvm:allow-discards resume=/dev/mapper/Vol-swap root=/dev/mapper/Vol-root home=/dev/mapper/Vol-home rw quiet" >> /boot/loader/entries/arch.conf
 
 
 
