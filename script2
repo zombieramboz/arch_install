@@ -87,7 +87,7 @@ bootctl --path=/boot install
 #.
 #.
 #.
-#HOOKS="base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck"
+echo base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck >> /etc/mkinitcpio.conf
 
 #mkinitcpio -p linux
 
