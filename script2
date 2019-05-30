@@ -98,13 +98,14 @@ bootctl --path=/boot install
 #Notes:
 #https://www.youtube.com/watch?v=DfC5hgdtbWY
 
-#echo title Archlinux > /boot/loader/entries/arch.conf
-#echo linux /vmlinuz-linux >> /boot/loader/entries/arch.conf
-#echo initrd /initramfs-linux.img >> /boot/loader/entries/arch.conf
+echo title Archlinux > /boot/loader/entries/arch.conf
+echo linux /vmlinuz-linux >> /boot/loader/entries/arch.conf
+echo initrd /initramfs-linux.img >> /boot/loader/entries/arch.conf
 #echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
 
 #Needs to be like below but not returning /dev/sda2 UUID (comes back blank)
 echo "options cryptdevice=UUID=<YOUR-PARTITION-UUID>:lvm:allow-discards resume=/dev/mapper/Vol-swap root=/dev/mapper/Vol-root home=/dev/mapper/Vol-home rw quiet" >> /boot/loader/entries/arch.conf
+echo $(blkid) >> >> /boot/loader/entries/arch.conf
 
 
 
