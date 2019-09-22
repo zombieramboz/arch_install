@@ -84,13 +84,11 @@ bootctl --path=/boot install
 
 #Do below manually (for now)
 
-#Edit /etc/mkinitcpio.conf
+#nano /etc/mkinitcpio.conf
 
-#MODULES="ext4"
-#.
-#.
-#. Replace exisitng line with below (no brackets) {ACTUALLY LOOKS LIKES THIS SHOULD BE ADDED TO HOOKS]
-echo base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck >> /etc/mkinitcpio.conf
+#Replace existing text after "HOOKS" with below (echoed into file)
+
+echo "base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck >> /etc/mkinitcpio.conf"
 
 #mkinitcpio -p linux
 
