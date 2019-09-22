@@ -81,7 +81,6 @@ bootctl --path=/boot install
 ######################################
 
 #https://www.howtoforge.com/tutorial/how-to-install-arch-linux-with-full-disk-encryption/
-#https://unix.stackexchange.com/questions/66878/how-can-i-replace-text-after-a-specific-word-using-sed
 
 #Replace existing text after "HOOKS" with required values
 
@@ -91,7 +90,8 @@ bootctl --path=/boot install
 #mkinitcpio -p linux
 
 #Automated
-sed -i 's/^HOOKS .*$/echo HOOKS "base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck"/' /etc/mkinitcpio.conf
+echo FILES=() > /etc/mkinitcpio.conf
+echo HOOKS="base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck" >> /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
 ######################################
