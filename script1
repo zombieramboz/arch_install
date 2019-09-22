@@ -25,6 +25,17 @@
 #./script1
 
 ######################################
+#Update MirrorList
+######################################
+
+echo "##" > /etc/pacman.d
+echo "##Arch Linux repository mirrorlist" > /etc/pacman.d
+echo "##" > /etc/pacman.d
+
+echo "## United Kingdom" > /etc/pacman.d
+echo "Server = http://archlinux.uk.mirror.allworldit.com/archlinux/$repo/os/$arch > /etc/pacman.d
+
+######################################
 #Add partitions
 ######################################
 
