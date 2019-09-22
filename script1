@@ -15,9 +15,9 @@
 #pacman -Syy
 
 #shred /dev/sda
-#or for quicker erase
+#or for quicker erase:
 #wipe /dev/sda
-#or even delete all partitions
+#or even delete all partitions:
 #dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
 
 #download script using wget https://raw.githubusercontent.com/zombieramboz/arch_install/master/script1
