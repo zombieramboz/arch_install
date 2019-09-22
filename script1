@@ -10,7 +10,14 @@
 ######################################
 
 #shred /dev/sda
+
+#or
+
 #wipe /dev/sda
+
+#or even delete all partitions
+
+#dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
 
 ######################################
 #Set keyboard
