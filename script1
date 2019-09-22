@@ -6,16 +6,16 @@
 #https://www.howtoforge.com/tutorial/how-to-install-arch-linux-with-full-disk-encryption/
 
 ######################################
-#Set keyboard
-######################################
-
-#loadkeys uk
-
-######################################
 #Wipe partitions
 ######################################
 
 #shred /dev/sda
+
+######################################
+#Set keyboard
+######################################
+
+#loadkeys uk
 
 ######################################
 #Manual actions (automate)
