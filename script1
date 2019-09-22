@@ -6,28 +6,14 @@
 #https://www.howtoforge.com/tutorial/how-to-install-arch-linux-with-full-disk-encryption/
 
 ######################################
-#Wipe partitions
+#Manual actions (automate)
 ######################################
 
 #shred /dev/sda
-
 #or for quicker erase
-
 #wipe /dev/sda
-
 #or even delete all partitions
-
 #dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
-
-######################################
-#Set keyboard
-######################################
-
-#loadkeys uk
-
-######################################
-#Manual actions (automate)
-######################################
 
 #Use wifi-menu to get on internet
 #download script using wget https://raw.githubusercontent.com/zombieramboz/arch_install/master/script1
