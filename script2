@@ -90,7 +90,7 @@ bootctl --path=/boot install
 #mkinitcpio -p linux
 
 #Automated
-echo FILES=() > /etc/mkinitcpio.conf
+echo "FILES=()" > /etc/mkinitcpio.conf
 echo HOOKS="base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck" >> /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
