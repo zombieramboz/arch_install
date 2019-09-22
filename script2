@@ -68,7 +68,7 @@ echo arch1 > /etc/hostname
 #Install wifi tools
 ######################################
 
-pacman -S wpa_supplicant dialog
+pacman -S wpa_supplicant dialog --noconfirm
 
 ######################################
 #Install bootctl
