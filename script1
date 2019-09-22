@@ -14,7 +14,7 @@
 #Update pacman
 #pacman -Syy
 
-#shred /dev/sda
+#shred -v /dev/sda
 #or for quicker erase:
 #wipe /dev/sda
 #or even delete all partitions:
