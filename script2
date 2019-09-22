@@ -81,7 +81,7 @@ bootctl --path=/boot install
 ######################################
 
 #https://www.howtoforge.com/tutorial/how-to-install-arch-linux-with-full-disk-encryption/
-https://unix.stackexchange.com/questions/66878/how-can-i-replace-text-after-a-specific-word-using-sed
+#https://unix.stackexchange.com/questions/66878/how-can-i-replace-text-after-a-specific-word-using-sed
 
 #Replace existing text after "HOOKS" with required values
 
