@@ -66,7 +66,7 @@ pacman -S wget zip unzip firefox-developer-edition --noconfirm
 #Install applications (my stuff)
 ######################################
 
-pacman -S catfish android-tools liferea filelight calibre alacarte audacious galculator shotwell bleachbit gramps librecad xreader keypassxc openshot gparted gpart pacman-contrib pidgin thunderbird dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent calc rsync git tor icedtea-web easytag feh gnumeric abiword --noconfirm
+pacman -S catfish android-tools liferea filelight calibre alacarte audacious galculator shotwell bleachbit gramps librecad xreader keepassxc openshot gparted gpart pacman-contrib pidgin thunderbird dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent calc rsync git tor icedtea-web easytag feh gnumeric abiword --noconfirm
 
 ######################################
 #Install applications (Humbers stuff)
