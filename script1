@@ -11,7 +11,7 @@
 
 #shred /dev/sda
 
-#or
+#or for quicker erase
 
 #wipe /dev/sda
 
