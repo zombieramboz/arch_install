@@ -1,0 +1,130 @@
+######################################
+#Notes:
+######################################
+
+#https://gist.github.com/heppu/6e58b7a174803bc4c43da99642b6094b
+#https://www.howtoforge.com/tutorial/how-to-install-arch-linux-with-full-disk-encryption/
+
+######################################
+#Set keyboard
+######################################
+
+#loadkeys uk
+
+######################################
+#Wipe partitions
+######################################
+
+#shred /dev/sda
+
+######################################
+#Manual actions (automate)
+######################################
+
+#Use wifi-menu to get on internet
+#download script using wget https://raw.githubusercontent.com/zombieramboz/arch_install/master/script1
+#chmod +x script1
+#./script1
+
+######################################
+#Add partitions
+######################################
+
+#TODO
+#Automate swap calculation by getting memory with "grep MemTotal /proc/meminfo | awk '{print $2}'"  
+
+#Notes
+#https://bbs.archlinux.org/viewtopic.php?id=246398
+
+parted /dev/sda mklabel gpt
+parted /dev/sda mkpart primary fat32 1MiB 500MiB 
+parted /dev/sda mkpart primary ext4 500MiB 100%
+parted /dev/sda set 1 esp on
+
+######################################
+#Encrypt partition
+######################################
+
+cryptsetup luksFormat /dev/sda2
+cryptsetup luksOpen /dev/sda2 luks
+
+######################################
+#Create LVM partitions
+######################################
+
+pvcreate /dev/mapper/luks
+vgcreate Vol /dev/mapper/luks
+lvcreate -L 8G -n swap Vol
+lvcreate -L 25G -n root Vol
+lvcreate -l 100%FREE -n home Vol
+
+######################################
+#Format partitions
+######################################
+
+mkfs.vfat -F32 /dev/sda1
+mkswap /dev/mapper/Vol-swap
+swapon /dev/mapper/Vol-swap
+mkfs.ext4 /dev/mapper/Vol-root
+mkfs.ext4 /dev/mapper/Vol-home
+
+######################################
+#Mount partitions
+######################################
+
+mount /dev/mapper/Vol-root /mnt
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+mkdir /mnt/home
+mount /dev/mapper/Vol-home /mnt/home
+
+######################################
+#Update pacman
+######################################
+
+pacman -Syy
+
+######################################
+#Install base
+######################################
+
+pacstrap /mnt base base-devel
+
+######################################
+#Generate fstab
+######################################
+
+genfstab -p -U /mnt > /mnt/etc/fstab
+
+######################################
+#Fetch other scripts
+#####################################
+
+wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script2
+wget -L https://raw.githubusercontent.com/zombieramboz/arch_install/master/script3
+
+######################################
+#Chmod script2 and script3
+######################################
+
+chmod +x script2
+chmod +x script3
+
+######################################
+#Copy scripts to new install
+######################################
+
+cp script2 /mnt/script2
+cp script3 /mnt/script3
+
+######################################
+#Delete old scripts
+######################################
+
+rm script*
+
+######################################
+#Execute script2
+######################################
+
+#arch-chroot /mnt ./script2
