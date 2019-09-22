@@ -29,7 +29,7 @@ echo "##" > /etc/pacman.d/mirrorlist
 echo "##Arch Linux repository mirrorlist" >> /etc/pacman.d/mirrorlist
 echo "##" >> /etc/pacman.d/mirrorlist
 echo "##United Kingdom" >> /etc/pacman.d/mirrorlist
-echo Server = http://archlinux.uk.mirror.allworldit.com/archlinux/"$repo"/os/"$arch" >> /etc/pacman.d/mirrorlist
+echo Server = http://archlinux.uk.mirror.allworldit.com/archlinux/'$repo'/os/'$arch/ >> /etc/pacman.d/mirrorlist
 
 ######################################
 #Add partitions
