@@ -14,13 +14,13 @@
 #https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Installation
 #https://www.alsa-project.org/main/index.php/Asoundrc
 
-pacman -S alsa-utils pulseaudio pulseaudio-alsa
+pacman -S alsa-utils pulseaudio pulseaudio-alsa --noconfirm
 
 ######################################
 #Install intel video drivers
 ######################################
 
-pacman -S xf86-video-intel
+pacman -S xf86-video-intel --noconfirm
 
 ######################################
 #Install xorg
