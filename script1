@@ -50,6 +50,8 @@ parted /dev/sda set 1 esp on
 #Encrypt partition
 ######################################
 
+#Note: Password not accepted on accessing sda2 if password contain special chars
+
 cryptsetup luksFormat /dev/sda2
 cryptsetup luksOpen /dev/sda2 luks
 
