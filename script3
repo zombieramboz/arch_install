@@ -97,4 +97,7 @@ rm script*
 #netctl enable {profile} (profile from /etc/netctl)
 #Note start gave me an error and had to login again for it to work
 
+#Workaround for crypt password issue
+#sudo cryptsetup luksChangeKey /dev/sda2
+
 
