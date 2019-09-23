@@ -9,6 +9,8 @@
 #Manual actions
 ######################################
 
+#shred -v /dev/sda
+
 #Use wifi-menu to get on internet
 #download script using wget https://raw.githubusercontent.com/zombieramboz/arch_install/master/script1
 #chmod +x script1
@@ -19,7 +21,6 @@
 ######################################
 
 dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
-#shred -v /dev/sda
 
 ######################################
 #Update MirrorList
