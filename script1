@@ -22,6 +22,12 @@ dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
 #shred -v /dev/sda
 
 ######################################
+#Set keyboard
+######################################
+
+loadkeys UK
+
+######################################
 #Update MirrorList
 ######################################
 
