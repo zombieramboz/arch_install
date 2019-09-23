@@ -25,7 +25,7 @@ dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
 #Set keyboard
 ######################################
 
-loadkeys UK
+loadkeys uk
 
 ######################################
 #Update MirrorList
