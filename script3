@@ -90,7 +90,9 @@ rm script*
 #Post script manual actions 
 ######################################
 
-#On logging into GUI
+#Onlogging into GUI
+
+#Can these be done via script?Do we need to use wifi-menu first?
 
 #connect to internet via wifi-menu
 #netctl start {profile} (profile from /etc/netctl)
