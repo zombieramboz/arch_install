@@ -17,10 +17,12 @@
 pacman -S alsa-utils pulseaudio pulseaudio-alsa --noconfirm
 
 ######################################
-#Install intel video drivers
+#Install video drivers
 ######################################
 
-pacman -S xf86-video-intel --noconfirm
+#Below is not recommended so commented out
+#pacman -S xf86-video-intel --noconfirm
+pacman -S mesa --noconfirm
 
 ######################################
 #Install xorg
