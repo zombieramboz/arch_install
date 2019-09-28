@@ -104,21 +104,7 @@ mkinitcpio -p linux
 echo title Archlinux > /boot/loader/entries/arch.conf
 echo linux /vmlinuz-linux >> /boot/loader/entries/arch.conf
 echo initrd /initramfs-linux.img >> /boot/loader/entries/arch.conf
-echo "options cryptdevice=UUID=<YOUR-PARTITION-UUID>:lvm:allow-discards resume=/dev/mapper/Vol-swap root=/dev/mapper/Vol-root home=/dev/mapper/Vol-home rw quiet" >> /boot/loader/entries/arch.conf
-
-#Repace partition ID in above with result of below:
-echo $(blkid) >> /boot/loader/entries/arch.conf
-
-#TODO
-#Populate UUID automatically like in the below example in line 4:
-
-#echo title Archlinux > /boot/loader/entries/arch.conf
-#echo linux /vmlinuz-linux >> /boot/loader/entries/arch.conf
-#echo initrd /initramfs-linux.img >> /boot/loader/entries/arch.conf
-#echo options root=PARTUUID="$(findmnt -fn -o PARTUUID /dev/sda3)" rw >> /boot/loader/entries/arch.conf
-
-#sudo blkid -s UUID -o value /dev/sda1
-
+echo "options cryptdevice=UUID=$(blkid -s UUID -o value /dev/sda2):lvm:allow-discards resume=/dev/mapper/Vol-swap root=/dev/mapper/Vol-root home=/dev/mapper/Vol-home rw quiet" >> /boot/loader/entries/arch.conf
 
 
 
