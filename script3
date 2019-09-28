@@ -1,0 +1,103 @@
+######################################
+#Pre script manual actions
+######################################
+
+#Set root password
+#Set user password
+#connect to wifi with wifi-menu
+
+######################################
+#Install alsa-utils + pulseaudio
+######################################
+
+#Notes:
+#https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Installation
+#https://www.alsa-project.org/main/index.php/Asoundrc
+
+pacman -S alsa-utils pulseaudio pulseaudio-alsa --noconfirm
+
+######################################
+#Install video drivers
+######################################
+
+pacman -S xf86-video-intel --noconfirm
+pacman -S mesa --noconfirm
+
+######################################
+#Install xorg
+######################################
+
+pacman -S xorg xorg-xinit xorg-server --noconfirm
+
+######################################
+#Install xfce
+######################################
+
+pacman -S xfce4 --noconfirm
+pacman -S xfce4-goodies --noconfirm
+
+######################################
+#Install xdm
+######################################
+
+pacman -S xorg-xdm xdm-archlinux --noconfirm
+
+######################################
+#Configure xdm
+######################################
+
+echo startxfce4 > /home/adrian/.xsession
+chmod 700 /home/adrian/.xsession
+chown adrian /home/adrian/.xsession 
+systemctl enable xdm-archlinux.service
+
+######################################
+#Set keyboard
+######################################
+
+localectl set-x11-keymap gb
+
+######################################
+#Install applications (essentials)
+######################################
+
+pacman -S wget zip unzip firefox-developer-edition --noconfirm
+
+######################################
+#Install applications (my stuff)
+######################################
+
+pacman -S catfish android-tools liferea filelight calibre alacarte audacious galculator shotwell bleachbit gramps librecad xreader keepassxc openshot gparted gpart pacman-contrib pidgin thunderbird dia gimp arduino telegram-desktop gnucash youtube-dl qbittorrent calc rsync git tor icedtea-web easytag feh gnumeric abiword --noconfirm
+
+######################################
+#Install applications (Humbers stuff)
+######################################
+
+pacman -S inotify-tools cryfs gnupg encfs os-prober hwinfo dmidecode ntfs-3g barcode kleopatra hdparm libevent openssh openvpn barcode geany geany-plugins --noconfirm
+
+######################################
+#Install media codecs
+######################################
+
+pacman -S x264 libde265 gst-libav --noconfirm
+
+######################################
+#Remove script
+######################################
+
+rm script*
+
+######################################
+#Post script manual actions 
+######################################
+
+#Onlogging into GUI
+
+#Can these be done via script?Do we need to use wifi-menu first?
+
+#connect to internet via wifi-menu
+#netctl start {profile} (profile from /etc/netctl)
+#netctl enable {profile} (profile from /etc/netctl)
+#Note start gave me an error and had to login again for it to work
+
+
