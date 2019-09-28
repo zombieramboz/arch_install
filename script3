@@ -95,6 +95,8 @@ rm script*
 
 #Can these be done via script?Do we need to use wifi-menu first?
 
+#Get profile using $(netctl list)? 
+
 #connect to internet via wifi-menu
 #netctl start {profile} (profile from /etc/netctl)
 #netctl enable {profile} (profile from /etc/netctl)
