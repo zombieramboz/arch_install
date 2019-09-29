@@ -74,6 +74,8 @@ pacman -S wpa_supplicant dialog --noconfirm
 #Install bootctl
 ######################################
 
+#https://wiki.archlinux.org/index.php/systemd-boot
+
 bootctl --path=/boot install
 
 ######################################
