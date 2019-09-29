@@ -84,12 +84,7 @@ bootctl --path=/boot install
 
 #https://www.howtoforge.com/tutorial/how-to-install-arch-linux-with-full-disk-encryption/
 
-#Replace existing text after "HOOKS" with required values
-
-#Manually
-#nano /etc/mkinitcpio.conf
-#echo "base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck >> /etc/mkinitcpio.conf"
-#mkinitcpio -p linux
+#Overwrites contents of file!!! Create a proper template. 
 
 #Automated
 echo "FILES=()" > /etc/mkinitcpio.conf
